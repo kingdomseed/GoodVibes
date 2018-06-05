@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".PlayActivity">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/PlayingAlbumArt"
+        android:padding="32dp"
+        android:layout_centerHorizontal="true"
+        android:adjustViewBounds="true"
+        tools:src="@drawable/album2" />
+
+    <TextView
+        android:id="@+id/SongPlayingText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignBottom="@id/PlayingAlbumArt"
+        tools:text="Coeur de Pirate: Blonde -- Adieu" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_above="@id/MenuButtons"
+            android:id="@+id/ButtonLayout"
+            android:orientation="horizontal"
+            android:layout_centerHorizontal="true"
+            android:paddingBottom="16dp"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/baseline_skip_previous_black_48"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/baseline_play_arrow_black_48"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/baseline_pause_black_48"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/baseline_skip_next_black_48"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            android:id="@+id/MenuButtons">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:paddingTop="32dp"
+                android:paddingBottom="32dp"
+                android:textColor="@color/secondaryTextColor"
+                android:background="@color/secondaryDarkColor"
+                android:text="Library" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:paddingTop="32dp"
+                android:paddingBottom="32dp"
+                android:textColor="@color/secondaryTextColor"
+                android:background="@color/secondaryColor"
+                android:text="Now Playing"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:paddingTop="32dp"
+                android:paddingBottom="32dp"
+                android:textColor="@color/secondaryTextColor"
+                android:background="@color/secondaryDarkColor"
+                android:text="Discover"/>
+        </LinearLayout>
+
+</RelativeLayout>
