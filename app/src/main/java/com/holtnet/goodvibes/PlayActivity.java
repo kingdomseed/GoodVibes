@@ -27,7 +27,7 @@ public class PlayActivity extends AppCompatActivity {
 
         TextView discoverTextView = findViewById(R.id.DiscoverButton);
 
-        libraryTextView.setOnClickListener(new View.OnClickListener() {
+        discoverTextView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent discoverIntent = new Intent(PlayActivity.this, DiscoverActivity.class);
