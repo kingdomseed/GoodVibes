@@ -18,10 +18,10 @@ public class PlayActivity extends AppCompatActivity {
         libraryTextView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent numbersIntent = new Intent(PlayActivity.this, LibraryActivity.class);
+                Intent libraryIntent = new Intent(PlayActivity.this, LibraryActivity.class);
 
                 // Start the new activity
-                startActivity(numbersIntent);
+                startActivity(libraryIntent);
             }
         });
 
@@ -30,10 +30,10 @@ public class PlayActivity extends AppCompatActivity {
         libraryTextView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent numbersIntent = new Intent(PlayActivity.this, DiscoverActivity.class);
+                Intent discoverIntent = new Intent(PlayActivity.this, DiscoverActivity.class);
 
                 // Start the new activity
-                startActivity(numbersIntent);
+                startActivity(discoverIntent);
             }
         });
     }

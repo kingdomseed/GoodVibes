@@ -1,18 +1,21 @@
 package com.holtnet.goodvibes;
 
+import android.graphics.drawable.Drawable;
+import android.widget.ImageView;
+
 public class Song {
 
     private String mSongName;
     private String mAlbumName;
     private String mArtistName;
-    private int mTrackNumber;
+    private int mAlbumArt;
 
-    public Song(String songName, String albumName, String artistName, int trackNumber)
+    public Song(String songName, String albumName, String artistName, int albumArt)
     {
         mSongName = songName;
         mAlbumName = albumName;
         mArtistName = artistName;
-        mTrackNumber = trackNumber;
+        mAlbumArt = albumArt;
     }
 
     public String getmSongName() {
@@ -27,7 +30,7 @@ public class Song {
         return mArtistName;
     }
 
-    public int getmTrackNumber() {
-        return mTrackNumber;
+    public int getmAlbumArt() {
+        return mAlbumArt;
     }
 }
