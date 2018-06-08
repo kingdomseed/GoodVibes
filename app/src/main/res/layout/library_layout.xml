@@ -1,27 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="horizontal"
     android:padding="16dp">
 
-    <TextView xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/SongName"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceListItemSmall"
-        android:gravity="center_vertical"
-        tools:text="Test"
-        android:minHeight="?android:attr/listPreferredItemHeightSmall" />
+    <ImageView
+        android:id="@+id/AlbumArt"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginRight="16dp"
+        android:scaleType="centerInside"
+        tools:src="@drawable/album2"/>
 
-    <TextView xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/AlbumName"
-        android:layout_width="match_parent"
+    <RelativeLayout
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceListItemSmall"
-        android:gravity="center_vertical"
-        tools:text="Test"
-        android:minHeight="?android:attr/listPreferredItemHeightSmall" />
+        android:id="@+id/SongTextView">
+
+        <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/SongName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceListItemSmall"
+            android:gravity="center_vertical"
+            tools:text="Test"
+            android:minHeight="16dp" />
+
+        <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/AlbumName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceListItemSecondary"
+            android:gravity="center_vertical"
+            tools:text="Test"
+            android:layout_below="@id/SongName"
+            android:minHeight="8dp" />
+
+        <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/ArtistName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceListItemSecondary"
+            android:gravity="center_vertical"
+            android:layout_below="@id/AlbumName"
+            tools:text="Test"
+            android:minHeight="8dp" />
+    </RelativeLayout>
+
+
+
 
 </LinearLayout>
