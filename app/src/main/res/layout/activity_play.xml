@@ -16,10 +16,24 @@
         tools:src="@drawable/album2" />
 
     <TextView
-        android:id="@+id/SongPlayingText"
+        android:id="@+id/SongTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@id/PlayingAlbumArt"
+        android:layout_centerHorizontal="true"
+        tools:text="Coeur de Pirate: Blonde -- Adieu" />
+    <TextView
+        android:id="@+id/AlbumTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/SongTitle"
+        android:layout_centerHorizontal="true"
+        tools:text="Coeur de Pirate: Blonde -- Adieu" />
+    <TextView
+        android:id="@+id/ArtistName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/AlbumTitle"
         android:layout_centerHorizontal="true"
         tools:text="Coeur de Pirate: Blonde -- Adieu" />
 
