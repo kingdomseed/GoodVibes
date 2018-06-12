@@ -4,8 +4,11 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import org.w3c.dom.Text;
 
 public class PlayActivity extends AppCompatActivity {
 
@@ -46,12 +49,19 @@ public class PlayActivity extends AppCompatActivity {
 
             Song song = data.getParcelableExtra("songDataToPass");
 
-            TextView songTextView = findViewById(R.id.SongName);
-            String songName = song.getmSongName();
-            songTextView.setText(songName); // THIS LINE DOES NOT WORK
+            TextView songTextView = findViewById(R.id.SongTitle);
+            songTextView.setText(song.getmSongName());
 
-            // THIS TOAST WORKS IF I DON'T TRY AND USE SETTEXT ON LINE 51
-            Toast.makeText(PlayActivity.this, songName, Toast.LENGTH_SHORT).show();
+            TextView albumTextView = findViewById(R.id.AlbumTitle);
+            albumTextView.setText(song.getmAlbumName());
+
+            TextView artistTextView = findViewById(R.id.ArtistName);
+            artistTextView.setText(song.getmArtistName());
+
+            ImageView albumArtImageView = findViewById(R.id.PlayingAlbumArt);
+            albumArtImageView.setImageResource(song.getmAlbumArt());
+
+
         }
     }
 }

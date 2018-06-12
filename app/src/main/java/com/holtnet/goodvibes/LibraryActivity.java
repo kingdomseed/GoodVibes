@@ -42,8 +42,6 @@ public class LibraryActivity extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(LibraryActivity.this, songs.get(position).toString(), Toast.LENGTH_SHORT).show();
-
                 Song songToPass = songs.get(position);
                 Intent playIntent = new Intent(view.getContext(), PlayActivity.class);
                 playIntent.putExtra("songDataToPass", songToPass);
