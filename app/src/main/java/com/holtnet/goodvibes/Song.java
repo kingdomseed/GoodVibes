@@ -6,6 +6,7 @@ import android.os.Parcelable;
 
 public class Song implements Parcelable {
 
+    // https://guides.codepath.com/android/Using-Parcelable#passing-data-between-intents
     public static final Parcelable.Creator<Song> CREATOR
             = new Parcelable.Creator<Song>() {
 
