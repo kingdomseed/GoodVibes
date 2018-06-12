@@ -72,5 +72,9 @@ public class Song implements Parcelable {
         return mAlbumArt;
     }
 
-
+    @Override
+    public String toString()
+    {
+        return "Song Name: " + mSongName + "\nAlbum Name: " + mAlbumName + "\nArtist Name: " + mArtistName;
+    }
 }
