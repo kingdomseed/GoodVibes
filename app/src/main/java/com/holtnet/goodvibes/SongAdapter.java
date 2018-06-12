@@ -15,8 +15,7 @@ import java.util.List;
 
 public class SongAdapter extends ArrayAdapter {
 
-    public SongAdapter(Context context, List<Song> songs)
-    {
+    public SongAdapter(Context context, List<Song> songs) {
         super(context, R.layout.library_layout, songs);
 
     }
@@ -26,7 +25,7 @@ public class SongAdapter extends ArrayAdapter {
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         View listItemView = convertView;
 
-        if(listItemView == null) {
+        if (listItemView == null) {
             listItemView = LayoutInflater.from(getContext()).inflate(
                     R.layout.library_layout, parent, false);
         }
@@ -44,7 +43,6 @@ public class SongAdapter extends ArrayAdapter {
 
         ImageView albumArtImageView = listItemView.findViewById(R.id.AlbumArt);
         albumArtImageView.setImageResource(currentSong.getmAlbumArt());
-
 
         return listItemView;
     }

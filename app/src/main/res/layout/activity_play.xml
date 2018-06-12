@@ -89,7 +89,7 @@
             android:background="@color/colorPrimaryDark"
             android:paddingBottom="32dp"
             android:paddingTop="32dp"
-            android:text="Library"
+            android:text="@string/library"
             android:textAlignment="center"
             android:textColor="@color/secondaryTextColor" />
 
@@ -101,7 +101,7 @@
             android:background="@color/colorPrimary"
             android:paddingBottom="32dp"
             android:paddingTop="32dp"
-            android:text="Now Playing"
+            android:text="@string/now_playing"
             android:textAlignment="center"
             android:textColor="@color/secondaryTextColor" />
 
@@ -113,7 +113,7 @@
             android:background="@color/colorPrimaryDark"
             android:paddingBottom="32dp"
             android:paddingTop="32dp"
-            android:text="Share"
+            android:text="@string/share"
             android:textAlignment="center"
             android:textColor="@color/secondaryTextColor" />
     </LinearLayout>

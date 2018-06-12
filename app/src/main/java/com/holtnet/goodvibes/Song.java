@@ -6,42 +6,6 @@ import android.os.Parcelable;
 
 public class Song implements Parcelable {
 
-    private String mSongName;
-    private String mAlbumName;
-    private String mArtistName;
-    private int mAlbumArt;
-
-    public Song(String songName, String albumName, String artistName, int albumArt)
-    {
-        mSongName = songName;
-        mAlbumName = albumName;
-        mArtistName = artistName;
-        mAlbumArt = albumArt;
-    }
-
-    private Song(Parcel in)
-    {
-        mSongName = in.readString();
-        mAlbumName = in.readString();
-        mArtistName = in.readString();
-        mAlbumArt = in.readInt();
-    }
-
-    @Override
-    public int describeContents()
-    {
-        return 0;
-    }
-
-    @Override
-    public void writeToParcel(Parcel dest, int flags)
-    {
-        dest.writeString(mSongName);
-        dest.writeString(mAlbumName);
-        dest.writeString(mArtistName);
-        dest.writeInt(mAlbumArt);
-    }
-
     public static final Parcelable.Creator<Song> CREATOR
             = new Parcelable.Creator<Song>() {
 
@@ -55,6 +19,38 @@ public class Song implements Parcelable {
             return new Song[size];
         }
     };
+
+    private String mSongName;
+    private String mAlbumName;
+    private String mArtistName;
+    private int mAlbumArt;
+
+    public Song(String songName, String albumName, String artistName, int albumArt) {
+        mSongName = songName;
+        mAlbumName = albumName;
+        mArtistName = artistName;
+        mAlbumArt = albumArt;
+    }
+
+    private Song(Parcel in) {
+        mSongName = in.readString();
+        mAlbumName = in.readString();
+        mArtistName = in.readString();
+        mAlbumArt = in.readInt();
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(mSongName);
+        dest.writeString(mAlbumName);
+        dest.writeString(mArtistName);
+        dest.writeInt(mAlbumArt);
+    }
 
     public String getmSongName() {
         return mSongName;
@@ -73,8 +69,7 @@ public class Song implements Parcelable {
     }
 
     @Override
-    public String toString()
-    {
+    public String toString() {
         return "Song Name: " + mSongName + "\nAlbum Name: " + mAlbumName + "\nArtist Name: " + mArtistName;
     }
 }
