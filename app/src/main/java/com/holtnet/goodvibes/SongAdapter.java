@@ -45,6 +45,4 @@ public class SongAdapter extends ArrayAdapter {
 
         return convertView;
     }
-
-
 }
