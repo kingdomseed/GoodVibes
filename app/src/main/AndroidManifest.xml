@@ -11,7 +11,7 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".PlayActivity"
-            android:label="Now Playing">
+            android:label="@string/now_playing">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -20,7 +20,8 @@
         </activity>
         <activity
             android:name=".LibraryActivity"
-            android:label="Library" />
+            android:label="@string/library"
+            android:parentActivityName="com.holtnet.goodvibes.PlayActivity"/>
     </application>
 
 </manifest>

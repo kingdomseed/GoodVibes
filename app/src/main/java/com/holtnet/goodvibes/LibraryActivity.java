@@ -2,8 +2,10 @@ package com.holtnet.goodvibes;
 
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
+import android.support.v4.app.NavUtils;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -19,6 +21,8 @@ public class LibraryActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.list_activity);
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         songs.add(new Song("Comme des Enfants", "Coeur de Pirate", "Coeur de Pirate", R.drawable.album1));
         songs.add(new Song("Pour un infidèle", "Coeur de Pirate", "Coeur de Pirate", R.drawable.album1));
@@ -50,5 +54,15 @@ public class LibraryActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                NavUtils.navigateUpFromSameTask(this);
+                return true;
+        }
+        return false;
     }
 }

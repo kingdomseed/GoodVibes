@@ -23,28 +23,27 @@ public class SongAdapter extends ArrayAdapter {
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
-        View listItemView = convertView;
 
-        if (listItemView == null) {
-            listItemView = LayoutInflater.from(getContext()).inflate(
+        if (convertView == null) {
+            convertView = LayoutInflater.from(getContext()).inflate(
                     R.layout.library_layout, parent, false);
         }
 
         Song currentSong = (Song) getItem(position);
 
-        TextView songNameTextView = listItemView.findViewById(R.id.SongName);
+        TextView songNameTextView = convertView.findViewById(R.id.SongName);
         songNameTextView.setText(currentSong.getmSongName());
 
-        TextView albumNameTextView = listItemView.findViewById(R.id.AlbumName);
+        TextView albumNameTextView = convertView.findViewById(R.id.AlbumName);
         albumNameTextView.setText(currentSong.getmAlbumName());
 
-        TextView artistNameTextView = listItemView.findViewById(R.id.ArtistName);
+        TextView artistNameTextView = convertView.findViewById(R.id.ArtistName);
         artistNameTextView.setText(currentSong.getmArtistName());
 
-        ImageView albumArtImageView = listItemView.findViewById(R.id.AlbumArt);
+        ImageView albumArtImageView = convertView.findViewById(R.id.AlbumArt);
         albumArtImageView.setImageResource(currentSong.getmAlbumArt());
 
-        return listItemView;
+        return convertView;
     }
 
 
